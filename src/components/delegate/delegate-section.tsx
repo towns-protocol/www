@@ -24,7 +24,7 @@ export const DelegateSection = () => {
           </Typography>
 
           <Typography as="span" size="md" className="text-gray-20">
-            Let someone you trust manage your RVR. They can make transfers or spend it for you.
+            Let someone you trust manage your TOWNS. They can make transfers or spend it for you.
           </Typography>
         </div>
         <WalletInfo showRvrBalance showDelegatee showAuthorizedClaimer />

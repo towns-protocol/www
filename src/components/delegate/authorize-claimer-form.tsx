@@ -102,7 +102,7 @@ export const AuthorizeClaimerForm = () => {
               </FormControl>
               <FormDescription>
                 The wallet address of the person that you want to give permissions to transfer or
-                spend your RVR
+                spend your TOWNS
               </FormDescription>
 
               <FormMessage />
