@@ -98,7 +98,7 @@ export const WalletInfo = ({
       </div>
       {showRvrBalance && (
         <div className="flex justify-between">
-          <span className="text-gray-20">RVR Balance:</span>
+          <span className="text-gray-20">TOWNS Balance:</span>
           <span className="text-white tabular-nums font-mono">
             {isRiverTokenLoading ? (
               <Skeleton className="inline-block h-4 w-20" />
