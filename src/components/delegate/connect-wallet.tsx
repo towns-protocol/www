@@ -2,10 +2,10 @@ import { DOCS_URL } from '@/constants/links'
 import { cn } from '@/lib/utils'
 import { useWeb3Modal } from '@web3modal/wagmi/react'
 import { ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Typography } from '../ui/typography'
-import { DelegateAscii } from './delegate-ascii'
 
 export const ConnectWallet = () => {
   const { open } = useWeb3Modal()
@@ -18,7 +18,7 @@ export const ConnectWallet = () => {
         'min-h-screen items-center',
       )}
     >
-      <DelegateAscii />
+      <Image src="/images/towns-t-logo.png" alt="TOWNS T Logo" width={269} height={269} />
       <div className="flex flex-col items-center gap-2">
         <Typography
           as="h1"
