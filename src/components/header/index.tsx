@@ -11,7 +11,7 @@ import { Github } from '../icons/Github'
 import { Towns } from '../icons/Towns'
 import { X } from '../icons/X'
 import NavigationLink from '../navigation-link'
-import { NetworkStatusBanner } from '../network-status-banner'
+import { RiverIsNowTownsBanner } from '../river-is-now-towns-banner'
 import Community from './community'
 import Developers from './developers'
 import Governance from './governance'
@@ -19,16 +19,16 @@ import MobileDropownMenu from './mobile-dropdown-menu'
 
 type HeaderProps = {
   cms: SiteDataQuery
-  withNetworkStatusBanner?: boolean
+  withBanner?: boolean
 }
 
-export default function Header({ cms, withNetworkStatusBanner }: HeaderProps) {
+export default function Header({ cms, withBanner }: HeaderProps) {
   const { isMobile } = useWindowSize()
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useAppStore()
 
   return (
     <header className="fixed top-0 z-50 flex w-full flex-col">
-      {withNetworkStatusBanner && <NetworkStatusBanner />}
+      {withBanner && <RiverIsNowTownsBanner />}
       <div className="relative">
         <div
           className={cn(

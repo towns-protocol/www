@@ -9,18 +9,12 @@ const AsciiHeroImage = dynamic(() => import('./ascii-hero-image'), { ssr: false 
 
 //! the heading and subheading on the Hero section doesn't follow the same size as the rest of the text on the page
 //! this is why we are not using the Typography component
-export default function Hero({
-  cms,
-  withNetworkStatusBanner,
-}: {
-  cms: SiteDataQuery
-  withNetworkStatusBanner?: boolean
-}) {
+export default function Hero({ cms, withBanner }: { cms: SiteDataQuery; withBanner?: boolean }) {
   return (
     <section
       className={cn(
-        'hero-glow relative flex w-full flex-col items-start justify-center overflow-x-clip bg-gray-90 py-24 pb-0  md:min-h-screen lg:items-center',
-        withNetworkStatusBanner ? 'pt-[100px] sm:pt-16' : 'pt-16',
+        'hero-glow relative flex w-full flex-col items-start justify-center overflow-x-clip bg-gray-90 py-24 pb-0 md:min-h-screen lg:items-center',
+        withBanner ? 'pt-[100px] sm:pt-16' : 'pt-16',
       )}
     >
       <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-between gap-8 px-4 py-8 md:px-8 lg:flex-row lg:py-[58px] xl:gap-14 xl:py-[200px]">
@@ -69,7 +63,7 @@ export default function Hero({
 
         <AsciiHeroImage className="w-[90%] flex-1 items-center justify-center md:mx-auto md:w-[60%] lg:mx-0 lg:w-[55%]" />
       </div>
-      <div className="relative inset-x-0 h-[200px] w-full md:mt-0 md:h-[340px] ">
+      <div className="relative inset-x-0 h-[200px] w-full md:mt-0 md:h-[340px]">
         <Image
           src="/images/hero-wave.webp"
           alt="hero image"
