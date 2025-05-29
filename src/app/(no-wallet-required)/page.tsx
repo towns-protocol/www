@@ -13,8 +13,8 @@ const IndexPage = async () => {
 
   return (
     <>
-      <Header cms={cmsData} withNetworkStatusBanner />
-      <Hero cms={cmsData} withNetworkStatusBanner />
+      <Header cms={cmsData} withBanner />
+      <Hero cms={cmsData} withBanner />
       <Benefits cms={cmsData} />
       <Features cms={cmsData} />
       <RunsOnRiver cms={cmsData} />
